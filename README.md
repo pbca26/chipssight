@@ -428,6 +428,17 @@ html
 </html>
 ```
 
+### Chips Game Data
+### Game Data Format
+https://github.com/sg777/bet/blob/master/docs/protocol/tx_types.md
+
+#### Prerequisites
+https://github.com/sg777/bet/blob/master/docs/protocol/release.md#downloading-precombiled-binaries-for-linux. You will need to have all 3 daemons installed, synced and running LN, Chipsd and Bet.
+
+#### Workaround to Track Chips Game Data Transactions in Chipsd
+Currently there's no getaddresstxids method implemented in Chips Core. However, one can use a specific dev address to track played games https://explorer.chips.cash/address/RSdMRYeeouw3hepxNgUzHn34qFhn1tsubb. In order to do that the code is using the following chips-cli command 
+```chips-cli listtransactions dev-address 9999999 0 true```. To assign "dev-address" label to RSdMRYeeouw3hepxNgUzHn34qFhn1tsubb use the following command in chips-cli ```chips-cli importaddress "RSdMRYeeouw3hepxNgUzHn34qFhn1tsubb" "dev-address"```. This effectively allows us to mimic getaddresstxids behavior.
+
 ## Contribute
 
 Contributions and suggestions are welcomed at [ChipsSight github repository](https://github.com/techloverhd/chipssight).
