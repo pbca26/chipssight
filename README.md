@@ -429,7 +429,7 @@ html
 ```
 
 ### Chips Game Data
-### Game Data Format
+### Game Data Format Description
 https://github.com/sg777/bet/blob/master/docs/protocol/tx_types.md
 
 #### Prerequisites
