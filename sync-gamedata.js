@@ -65,7 +65,7 @@ ChipsGameDataDb.prototype.extractTxData = function(txid) {
     var temp = stdout.split('Data part of tx');
     logger.debug('bet extract_tx_data', txid);
     logger.debug(stdout.split('Data part of tx'));
-    // skip malformatted transactions
+    // skip malformed transactions
     try {
       logger.debug(stdout);
       logger.debug(JSON.parse(temp[1]));
